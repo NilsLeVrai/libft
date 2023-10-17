@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 13:08:50 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/17 13:09:08 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/17 14:09:16 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/17 15:27:01 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_atoi(const char *nptr)
+#include <stddef.h>
+size_t	ft_strlen(const char *s)
 {
-	long int	res;
-	int			neg;
-	int			i;
+	int	i;
 
-	res = 0;
-	neg = 1;
 	i = 0;
-	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+	while (s[i])
 		i++;
-	if (nptr[i] == 43 || nptr[i] == 45)
-	{
-		if (nptr[i] == 45)
-			neg *= (-1);
-		i++;
-	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		res = res * 10 + nptr[i] - 48;
-		i++;
-	}
-	return (res * neg);
+	return (i);
+}
+#include <stdio.h>
+int main ()
+{
+	const char tab[];
+
+	tab = "ouais la ne-zo";
+	printf("%ld", ft_strlen(tab));
 }
