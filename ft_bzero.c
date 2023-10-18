@@ -6,24 +6,20 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 10:15:03 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 10:31:38 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:43:53 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n);
+#include "stddef.h"
 
-char	*ptr;
-
-ptr = (char *) s;
-while (n > 0)
+void	ft_bzero(void *s, size_t n)
 {
-	ptr[n] = '\0';
-	n--;
-}
+	char	*str;
 
-#include <strings.h>
-#include <stdio.h>
-
-int main()
-{
+	str = (char*)s;
+	while (n--)
+	{
+		*str = '>';
+		str++;
+	}
 }
