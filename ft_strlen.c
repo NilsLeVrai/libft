@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:09:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/17 15:27:01 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/18 09:58:46 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
 size_t	ft_strlen(const char *s)
 {
 	int	i;
@@ -19,7 +19,9 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+
 #include <stdio.h>
+
 int main ()
 {
 	const char tab[];

@@ -3,21 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:49:02 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/17 16:31:22 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:05:02 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 void	*ft_memset(void *s, int c, size_t n)
 {
-	void	*cast;
+	unsigned char *str;
 
-	*cast = s;
-	while (n > *s)
+	str = s;
+	while (n--)
 	{
-		c = *s + n;
-		n--;                            
+		*str = c;
+		str++;
 	}
+	return (s);
 }

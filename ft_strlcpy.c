@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 10:44:45 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 09:52:40 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/18 09:56:16 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/18 10:03:34 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include <stddef.h>
+#include <stdio.h>
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t n);
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
 }

@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 10:44:45 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 09:52:40 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/18 10:15:03 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/18 10:31:38 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, size_t n);
+
+char	*ptr;
+
+ptr = (char *) s;
+while (n > 0)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	ptr[n] = '\0';
+	n--;
+}
+
+#include <strings.h>
+#include <stdio.h>
+
+int main()
+{
 }
