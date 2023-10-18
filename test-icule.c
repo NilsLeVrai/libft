@@ -8,16 +8,23 @@
 
 
 
+//memcpy
+#include <stdio.h>
+#include <string.h>
 
-
-
+int	main()
 {
-		
+	size_t n = 2;
+	char tab[10] = "ouqis";
+	char tab2[10] = "J";
+	memcpy(tab, tab2, n);
+	printf("Pas moi:\n%s",tab2);
+	printf("\n");
+	ft_memcpy(tab, tab2, n);
+	printf("Moi:\n%s",tab2);
 }
 
-
-
-//
+//bzero
 #include <stdio.h>
 #include <string.h>
 
