@@ -3,6 +3,9 @@
 
 
 
+//merci alexis t es le meilleur
+// strchr
+strcmp(strchr("", '\0'), ft_strchr("", '\0')) == 0 ? printf("🍾") : printf("🤡");
 
 
 
