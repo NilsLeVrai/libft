@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char *ft_strchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
 	unsigned int		i;
 	unsigned char	char_find;
@@ -31,11 +31,11 @@ char *ft_strchr(const char *s, int c)
 	char_find = (unsigned char) c;
 	i = 0;
 	len = ft_strlen(s);
-	while (i <= (unsigned int) len)
+	while (i < (unsigned int) len)
 	{
 		if (s[i] == char_find)
 			return ((char *) &s[i]);
-		i++;
+		i--;
 	}
 	return (NULL);
 }
@@ -53,9 +53,9 @@ int main()
         *ptr = 'I';
     printf( "Result : %s\n", dest);   
     return 0; */
-	//strcmp(strchr("oui", '\0'), ft_strchr("oui", '\0')) == 0 ? printf("🍾") : printf("🤡");
-	printf("Pas moi: :( \n%s", strchr("ouais", 'i'));
+	//strcmp(strrchr("oui", '\0'), ft_strrchr("oui", '\0')) == 0 ? printf("🍾") : printf("🤡");
+	printf("Pas moi: :( \n%s", strrchr("ouais", 'i'));
 	printf("\n");
-	printf("Moi: :)\n%s", ft_strchr("ouais", 'i'));
+	printf("Moi: :)\n%s", ft_strrchr("ouais", 'i'));
 
 }

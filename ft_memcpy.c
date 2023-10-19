@@ -32,7 +32,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 int	main()
 {
 	size_t n = 0;
-	char dest[20] = "wer";
+	char dest[20] = "\0";
 	char src[50] = "\0";
 	ft_memcpy(dest, src, n);
 	printf("Pas moi:\n%s",dest);

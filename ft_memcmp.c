@@ -11,22 +11,22 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
-
+#include <stdio.h>
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char *s1_ptr;
-	const char *s2_ptr;
-	unsigned int i;
+	unsigned const char *src;
+	unsigned const char *dest;
 
-	s1_ptr = (char*) s1;
-	s2_ptr = (char*) s2;
-	i = 0;
+	src = (unsigned const char *) s1;
+	dest =(unsigned const char *) s2;
 	while (n--)
 	{
-		if (s1_ptr[i] != s2_ptr[i])
-			i++;
+		if (*src != *dest)
+			return (*src - *dest);
+		src++;
+		dest++;
 	}
-	return (s1_ptr[i]  - s2_ptr[i]);
+	return (0);
 }
 
 #include <stdio.h>
@@ -34,9 +34,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int	main()
 {
-	size_t n = 4;
-	char tab[30] = "YannsYannsYanns";
-	char tab2[22] = "Yans";
+	size_t n = 5;
+	char tab[50] = "45";
+	char tab2[21] = "455";
 	printf("Pas moi:\n%d",memcmp(tab, tab2, n));
 	printf("\n");
 	printf("Moi:\n%d", ft_memcmp(tab, tab2, n));

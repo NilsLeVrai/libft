@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strdup(const char *s)
+char	*ft_strdup(char *src)
 {
 	char	*p;
-	int		i;
+	int		compteur;
 
-	i = 0;
-	p = (char *) malloc(sizeof(char)* (ft_strlen(s) + 1));
+	compteur = 0;
+	p = (char *) malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!p)
 		return (NULL);
-	ft_strcpy(p, s);
-	p[i] = '\0';
+	while (*src)
+		p[compteur++] = *src++;
+	p[compteur] = '\0';
 	return (p);
 }
