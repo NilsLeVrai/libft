@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 14:23:07 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 15:38:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:05:15 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* void	*calloc(size_t nmemb, size_t size)
+/* void	*ft_calloc(size_t nmemb, size_t size)
 {
 
 } */
