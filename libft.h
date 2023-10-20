@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 10:54:04 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 16:41:10 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 16:50:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strrchr(const char *s, int c);
 
 //int
 
-int		atoi(const char *nptr);
+int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

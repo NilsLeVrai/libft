@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/10/20 16:34:39 by niabraha         ###   ########.fr        #
+#    Updated: 2023/10/20 17:20:01 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC_FILES = ft_atoi.c \
 			ft_memset.c \
 			ft_strchr.c \
 			ft_strdup.c \
+			ft_strlen.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
@@ -42,6 +43,7 @@ OBJ_FILES = ft_atoi.o \
 			ft_memset.o \
 			ft_strchr.o \
 			ft_strdup.o \
+			ft_strlen.c \
 			ft_strncmp.o \
 			ft_strnstr.o \
 			ft_strrchr.o \
@@ -52,6 +54,8 @@ OBJ_FILES = ft_atoi.o \
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
+
+OBJECTS = $(OBJ_FILES:)
 
 all: ${NAME}
 
