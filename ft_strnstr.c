@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 13:19:10 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 16:35:01 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/20 16:39:23 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/20 16:39:32 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isascii(int c)
+/* char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
-}
+	
+} */
