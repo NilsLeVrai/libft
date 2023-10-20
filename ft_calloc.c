@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 10:15:03 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 15:36:00 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/20 14:23:07 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/20 15:38:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+/* void	*calloc(size_t nmemb, size_t size)
 {
-	char	*str;
 
-	str = (char *) s;
-	while (n--)
-	{
-		*str = "\0";
-		str++;
-	}
-}
+} */

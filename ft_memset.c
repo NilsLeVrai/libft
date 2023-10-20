@@ -6,14 +6,15 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:49:02 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 13:43:57 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:31:59 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *str;
+	unsigned char	*str;
 
 	str = s;
 	while (n--)
@@ -23,5 +24,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-

@@ -6,9 +6,11 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 14:09:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 09:58:46 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:32:10 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -18,14 +20,4 @@ size_t	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-#include <stdio.h>
-
-int main ()
-{
-	const char tab[];
-
-	tab = "ouais la ne-zo";
-	printf("%ld", ft_strlen(tab));
 }

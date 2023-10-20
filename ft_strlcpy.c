@@ -6,15 +6,13 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 09:56:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 10:33:46 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:33:01 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-/* size_t	ft_strlcpy(char *dst, const char *src, size_t n)
+size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	while (*src != '\0')
 	{
@@ -24,14 +22,4 @@
 	}
 	(*dst) = '\0';
 	return (src);
-	
-} */
-
-int main ()
-{
-	size_t n = 6;
-	char tab[30] = "YannsYannsYanns";
-	char tab2[22] = "Clic";
-	strlcpy(tab, tab2, n);
-	printf("Pas moi:\n%s",tab);
 }

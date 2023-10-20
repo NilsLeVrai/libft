@@ -6,9 +6,11 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:08:50 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/18 09:52:26 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:26:03 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

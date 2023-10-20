@@ -1,4 +1,4 @@
-
+/* 
 
 
 
@@ -55,4 +55,4 @@ int	main()
 	printf("%s",tab);
 	printf("\n");
 	printf("%s", tab2);
-}
+} */

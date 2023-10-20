@@ -6,9 +6,11 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:41 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/19 10:47:08 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:42:06 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

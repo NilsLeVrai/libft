@@ -6,8 +6,13 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:07 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/19 10:48:24 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 15:36:54 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t n)
+{
+	
+} */
