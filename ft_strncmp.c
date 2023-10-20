@@ -9,9 +9,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 
     i = 0;
     if (n == 0)
-            return (0);
+        return (0);
     while (s1[i] == s2[i] && i < n)
-        i++;
+        n--;
     return (s1[i] - s2[i]);
 }
 
@@ -19,9 +19,9 @@ int main ()
 {
     int res;
     size_t  i;
-    char tab[20] = "ouais la team";
-    char tab2[20] = "ouais la team";
-    i = 0;
+    char tab[20] = "pq";
+    char tab2[20] = "pp";
+    i = 2;
     res = strncmp(tab, tab2, i);
     printf("Pas moi :( %d\n", res);
     res = ft_strncmp(tab, tab2, i);
