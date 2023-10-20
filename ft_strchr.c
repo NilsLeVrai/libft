@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@students.42.fr>         +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:07:12 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/19 17:07:12 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:36:12 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,13 @@ int main()
     printf( "Result : %s\n", dest);   
     return 0; */
 	//strcmp(strchr("oui", '\0'), ft_strchr("oui", '\0')) == 0 ? printf("🍾") : printf("🤡");
-	printf("Pas moi: :( \n%s", strchr("ouais", 'i'));
+	printf("Pas moi: :( \n%s", strchr("is", 'n'));
 	printf("\n");
-	printf("Moi: :)\n%s", ft_strchr("ouais", 'i'));
+	printf("Moi: :)\n%s", ft_strchr("is", 'n'));
+	printf("\n");
+	printf("stRRch: \n");
+	printf("Pas moi: :( \n%s", strchr("is", 'n'));
+	printf("\n");
+	printf("Moi: :)\n%s", ft_strchr("is", 'n'));
 
 }

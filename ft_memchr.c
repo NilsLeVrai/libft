@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 09:56:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 10:33:46 by niabraha         ###   ########.fr       */
+/*   Created: 2023/10/20 10:52:10 by niabraha          #+#    #+#             */
+/*   Updated: 2023/10/20 11:42:40 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+void	*memchr(const void *s, int c, size_t n)
+{
+	while ()
+}
+
 #include <stdio.h>
 #include <string.h>
 
-/* size_t	ft_strlcpy(char *dst, const char *src, size_t n)
-{
-	while (*src != '\0')
-	{
-		*dst = *src;
-		dst++;
-		src++;
-	}
-	(*dst) = '\0';
-	return (src);
-	
-} */
+int main () {
+   const char str[] = "ouais la zone";
+   const char ch = 'z';
+   char *ret;
 
-int main ()
-{
-	size_t n = 6;
-	char tab[30] = "YannsYannsYanns";
-	char tab2[22] = "Clic";
-	strlcpy(tab, tab2, n);
-	printf("Pas moi:\n%s",tab);
+   ret = memchr(str, ch, strlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }
