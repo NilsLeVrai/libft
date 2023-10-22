@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 SRC_FILES = ft_atoi.c \
+			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -23,6 +24,7 @@ SRC_FILES = ft_atoi.c \
 			ft_memset.c \
 			ft_strchr.c \
 			ft_strdup.c \
+			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
@@ -33,11 +35,13 @@ SRC_FILES = ft_atoi.c \
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
+ARFLAGS = rcs
 
-all: ${NAME}
+OBJ = $(SRC_FILES:.c=.o)
+all: $(NAME)
 
-${NAME}:
-	$(CC) $(CFLAGS) -c $(SRC_FILES)
+$(NAME): $(OBJ)
+	$(AR) $(ARFLAGS) $@ $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -46,6 +50,6 @@ clean:
 	rm -f *.o
 	
 fclean: clean
-	rm -f ${NAME}
+	rm -f $(NAME)
 	
 re: fclean all

@@ -11,15 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//SIGSEGV (overflow the dest)
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	while (*src != '\0')
+	size_t	i;
+	size_t	len_src;
+
+	i = 0;
+	len_src = ft_strlen(src);
+	if (n > 0)
 	{
-		*dst = *src;
-		dst++;
-		src++;
+		while ((n - 1) > i && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	(*dst) = '\0';
-	return (src);
+	return(len_src);
 }

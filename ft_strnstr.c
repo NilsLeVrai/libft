@@ -10,7 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* char	*ft_strnstr(const char *big, const char *little, size_t n)
-{
-	
-} */
+/*
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t n)
+{	n = 3;
+
+	if (*little  == '\0')
+		return ((const char *) bigmac);
+	return (*bigmac);	
+}
+*/

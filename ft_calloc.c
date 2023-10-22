@@ -12,7 +12,11 @@
 
 #include "libft.h"
 
-/* void	*ft_calloc(size_t nmemb, size_t size)
-{
-
-} */
+void	*ft_calloc(size_t nmemb, size_t size)
+{	
+	void	*memory;
+	if (!(memory = malloc(nmemb * size)))
+		return (NULL);
+	ft_bzero(memory, (nmemb * size));
+	return (memory);
+}
