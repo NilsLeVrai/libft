@@ -6,12 +6,12 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 09:56:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 15:33:01 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:21:56 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//SIGSEGV (overflow the dest)
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
