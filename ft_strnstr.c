@@ -11,33 +11,34 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
+#include <string.h>
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
-	unsigned const char*	bigmac;
-	unsigned const char*	stuart_little;
-	n = 3;
+	size_t	i;
 
-	if (*little  == '\0')
-		return (*big);
-	while ()
-	// tant que n inferieur n
-	// strncmp
-	return (0);
-		//si little pas trouve dans big --> NULL
-		//sinon pointeur 	
+	i = 0;
+	if (*little  == '\0' || !little )
+		return ((char *)big);
+	while (i < n)
+	{
+		if (strncmp(&big[i], &little[i], n) == 0 && little [i] != '\0')
+		{
+			return((char *)little);
+		}
+		i++;
+	}
+	return (NULL);
 }
-#include <stdio.h>
-#include <bsd/string.h>
+
 int main()
 {
-	const char *largestring = "Foo Bar Baz";
+	const char *largestring = "FBar Baz";
 	const char *smallstring = "Bar";
 	char *ptr;
 	
-	ptr = strnstr(largestring, smallstring, 6);
-	printf("Pas moi :(\n%s", ptr);
-	ptr = ft_strnstr(largestring, smallstring, 6);
+	//ptr = strnstr(largestring, smallstring, 6);
+	//printf("Pas moi :(\n%s", ptr);
+	ptr = ft_strnstr(largestring, smallstring, 8);
 	printf("Moi :(\n%s", ptr);
 }
-

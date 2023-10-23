@@ -18,5 +18,6 @@ int main ()
 
 	nb = 10;
 	power = 4;
+	while (power )
 	printf("%d", ft_power(nb, power));
 }
