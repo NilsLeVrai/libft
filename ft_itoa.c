@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/23 14:46:04 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:23:48 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,12 @@ char	*ft_itoa(int n)
 	i = 0;
 	base = power(len - 1);
 	tab = (char *) malloc(sizeof(char) * (len + 1));
-	/* if (!tab)
-		return (NULL); */
-	//while (n > 0)
+	if (!tab)
+		return (NULL);
 	while (n > 0)
 	{
-		tab[i++] = ((n % base) + '0');
-		printf("%d\n", n % base);
-		//printf("%d\n", n % power(base, len-1));
-		n /= 10;
+		tab[i++] = ((n / base) + '0');
+		n %= base;
 		base /= 10;
 	}
 	tab[i] = '\0';
@@ -70,6 +67,6 @@ int main()
 {
 	int		i;
 
-	i = 1561612;
+	i = 2147;
 	printf("%s", ft_itoa(i));
 }
