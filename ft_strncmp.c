@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:56:17 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 17:47:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:49:04 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char *char1;
 	unsigned char *char2;
 
+	if (!s1 || !s2)
+		return 0;
 	char1 = (unsigned char*) s1;
 	char2 = (unsigned char*) s2; 
 	i = 0;
