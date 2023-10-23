@@ -56,3 +56,13 @@ int	main()
 	printf("\n");
 	printf("%s", tab2);
 } */
+	//Cast zero en void*
+	//NULL
+	/* int:
+	if (!s1 || !s2)
+		return -1;
+	char:
+		if (!s1 || !s2)
+		return NULL;
+	void:
+		return ; */

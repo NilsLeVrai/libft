@@ -13,16 +13,10 @@
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
-{
-	char	*p;
-	int		compteur;
-
-	compteur = 0;
-	p = (char *) malloc(sizeof(char) * (ft_strlen(nmemb) + 1));
-	if (!p)
+{	
+	void	*memory;
+	if (!(memory = malloc(nmemb * size)))
 		return (NULL);
-	while (*src)
-		p[compteur++] = *src++;
-	p[compteur] = '\0';
-	return (p);
+	ft_bzero(memory, (nmemb * size));
+	return (memory);
 }
