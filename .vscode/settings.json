@@ -3,7 +3,9 @@
     "string.h": "c",
     "stddef.h": "c",
     "stdio.h": "c",
-    "libft.h": "c"
+    "libft.h": "c",
+    "stdlib.h": "c",
+    "unistd.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",
