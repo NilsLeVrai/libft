@@ -6,11 +6,11 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/10/23 11:05:56 by niabraha         ###   ########.fr        #
+#    Updated: 2023/10/26 13:49:21 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC_FILES = ft_atoi.c \
+FILES_PT1 = ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -18,6 +18,7 @@ SRC_FILES = ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
 			ft_memmove.c \
@@ -32,12 +33,24 @@ SRC_FILES = ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c
 
+FILES_PT2 = ft_itoa.c \
+			ft_putchar_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_putstr_fd.c \
+			ft_striteri.c \
+			ft_strjoin.c \
+			ft_strmapi.c \
+			ft_strtrim.c \
+			ft_split.c \
+			ft_substr.c \
+
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 ARFLAGS = rcs
 
-OBJ = $(SRC_FILES:.c=.o)
+OBJ = $(FILES_PT1 FILES_PT2:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)

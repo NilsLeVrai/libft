@@ -6,11 +6,10 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/25 10:27:33 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/26 12:47:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	malloc_size(int n)
@@ -18,18 +17,31 @@ int	malloc_size(int n)
 	int i;
 
 	i = 0;
-	while(n > 0)
+	if (n > 0)
 	{
-		n /= 10;
-		i++;
+		while(n != 0)
+		{
+			n /= 10;
+			i++;
+		}	
 	}
+	if (n < 0)
+	{
+		while(n != 0)
+		{
+			n /= 10;
+			i++;
+		}	
+	}
+	else
+		return (1);
 	return (i);
 }
 
 int	power(int power)
 {
 	int	i;
-	int	nb;	
+	int	nb;
 
 	i = 0;
 	nb = 1;
@@ -41,45 +53,38 @@ int	power(int power)
 	return (nb);
 }
 
-int neg_true(int n)
-{
-	
-}
-
 char	*ft_itoa(int n)
 {
-	char *tab;
+	char 	*tab;
 	int		i;
-	int len = malloc_size(n);
-	int base;
+	int 	len;
+	int 	base;
 
 	i = 0;
+	len = malloc_size(n);
 	base = power(len - 1);
 	tab = (char *) malloc(sizeof(char) * (len + 1));
 	if (!tab)
 		return (NULL);
-	if (n < 0)
-		neg_true(n);
-	if (n > 0)
-		neg_fse()
-	/*
-	neg < 0
-	neg > 0
-	*/
-	while (n > 0)
+	while (n)
 	{
 		tab[i++] = ((n / base) + '0');
+		//printf("n: %d\nbase: %d\n(n / base): %d\n", n , base, n/base);
 		n %= base;
 		base /= 10;
 	}
 	tab[i] = '\0';
 	return (tab);
 } 
-
+/*
+/
+%
+/
+*/
 int main()
 {
 	int		i;
 
-	i = -2147;
+	i = 0;
 	printf("%s", ft_itoa(i));
 }
