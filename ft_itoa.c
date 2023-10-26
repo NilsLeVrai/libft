@@ -15,8 +15,14 @@
 int	malloc_size(int n)
 {
 	int i;
+	long	nb;
 
 	i = 0;
+	nb = n;
+	if (nb == 0)
+		return (1);
+	if (nb < 0)
+		nb *= -1;
 	while(n > 0)
 	{
 		n /= 10;
@@ -43,20 +49,21 @@ int	power(int power)
 char	*ft_itoa(int n)
 {
 	char 	*tab;
-	int		i;
+	int	i;
 	int 	len;
 	int 	base;
+	long	nb;
 
 	i = 0;
 	len = malloc_size(n);
 	base = power(len - 1);
 	tab = (char *) malloc(sizeof(char) * (len + 1));
+	nb = n;
 	if (!tab)
 		return (NULL);
-	while (n > 0)
+	while (i < len)
 	{
 		tab[i++] = ((n / base) + '0');
-		//printf("n: %d\nbase: %d\n(n / base): %d\n", n , base, n/base);
 		n %= base;
 		base /= 10;
 	}
