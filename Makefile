@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/10/26 13:49:21 by niabraha         ###   ########.fr        #
+#    Updated: 2023/10/26 14:01:42 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 ARFLAGS = rcs
 
-OBJ = $(FILES_PT1 FILES_PT2:.c=.o)
+OBJ = $(FILES_PT1:.c=.o) $(FILES_PT2:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
