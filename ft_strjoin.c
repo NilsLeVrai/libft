@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@students.42.fr>         +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:03:26 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/24 16:03:26 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:12:01 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcat(char *dest, char *src)
+/* char    *ft_strcat(char *dest, char *src)
 {
     int i;
     int j;
@@ -73,4 +73,4 @@ char    *ft_strjoin(char const *s1, char const *s2)
     }
     mallocrane[ballec - 1] = '\0';
     return (mallocrane);
-}
+} */

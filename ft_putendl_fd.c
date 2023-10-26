@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:57:32 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/26 13:54:35 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:11:05 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void ft_putendl_fd(char *s, int fd)
     if (!s || fd < 0)
         return ;
     ft_putstr_fd(s, fd);
-    ft_putchar_fd("-", fd);
+    ft_putchar_fd('-', fd);
 }

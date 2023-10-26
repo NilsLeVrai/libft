@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:39:23 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/26 13:38:50 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:51:11 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 	}
 	return (NULL);
 }
-int main()
+/* int main()
 {
 	const char *largestring = "FBar Baz";
 	const char *smallstring = "Bar";
@@ -39,4 +39,4 @@ int main()
 	//printf("Pas moi :(\n%s", ptr);
 	ptr = ft_strnstr(largestring, smallstring, 8);
 	printf("Moi :(\n%s", ptr);
-}
+} */

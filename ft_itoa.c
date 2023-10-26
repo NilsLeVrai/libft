@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/26 12:47:36 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/26 14:19:43 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,11 @@ int	malloc_size(int n)
 	int i;
 
 	i = 0;
-	if (n > 0)
+	while(n > 0)
 	{
-		while(n != 0)
-		{
-			n /= 10;
-			i++;
-		}	
+		n /= 10;
+		i++;
 	}
-	if (n < 0)
-	{
-		while(n != 0)
-		{
-			n /= 10;
-			i++;
-		}	
-	}
-	else
-		return (1);
 	return (i);
 }
 
@@ -66,7 +53,7 @@ char	*ft_itoa(int n)
 	tab = (char *) malloc(sizeof(char) * (len + 1));
 	if (!tab)
 		return (NULL);
-	while (n)
+	while (n > 0)
 	{
 		tab[i++] = ((n / base) + '0');
 		//printf("n: %d\nbase: %d\n(n / base): %d\n", n , base, n/base);
@@ -76,15 +63,11 @@ char	*ft_itoa(int n)
 	tab[i] = '\0';
 	return (tab);
 } 
-/*
-/
-%
-/
-*/
-int main()
+
+/* int main()
 {
 	int		i;
 
 	i = 0;
 	printf("%s", ft_itoa(i));
-}
+} */
