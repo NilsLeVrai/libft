@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/10/27 17:28:10 by niabraha         ###   ########.fr        #
+#    Updated: 2023/10/27 18:43:07 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ FILES_PT1 = ft_atoi.c \
 			ft_memset.c \
 			ft_strchr.c \
 			ft_strdup.c \
+			ft_strlcat.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strncmp.c \

@@ -1,4 +1,4 @@
-#include "libft.h"
+/* #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -27,4 +27,4 @@ int main()
 	const char *s1 = "abcdefgh";
 	const char *set = (void*)NULL;
 	printf("%s", ft_strtrim(s1, set));
-}
+} */

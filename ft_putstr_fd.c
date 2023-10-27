@@ -6,19 +6,19 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:47:51 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/26 13:55:57 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:06:42 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (!s || fd < 0)
-        return ;
-    while (*s)
-    {
-        ft_putchar_fd(*s, fd);
-        s++;
-    }
+	if (!s || fd < 0)
+		return ;
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }

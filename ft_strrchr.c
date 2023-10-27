@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:07:12 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 15:40:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:05:30 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char		char_find;
-	int			len;
+	unsigned char	char_find;
+	int				len;
 
 	char_find = (unsigned char) c;
 	len = ft_strlen(s);

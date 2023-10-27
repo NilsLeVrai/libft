@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 09:56:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/23 13:21:56 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:05:08 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 		}
 		dst[i] = '\0';
 	}
-	return(len_src);
+	return (len_src);
 }

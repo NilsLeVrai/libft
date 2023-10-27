@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:29:32 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 17:28:25 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/27 19:05:09 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *p;
-	int i;
-	int j;
+	char	*p;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (s1[i] && ft_strchr(set, s1[i]))
@@ -24,18 +24,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1) - 1;
 	while (j >= i && ft_strchr(set, s1[j]))
 		j--;
-	p = (char *)malloc(j - i + 2); // +2 pour le caractère nul '\0'
+	p = (char *)malloc(j - i + 2);
 	if (!p)
 		return (NULL);
 	ft_strlcpy(p, s1 + i, j - i + 2);
 	return (p);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-	const char *s1 = "poulet roti";
-	const char *set = "ibo";
-	printf("%s", ft_strtrim(s1, set));
-} */
