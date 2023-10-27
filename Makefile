@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/10/26 14:01:42 by niabraha         ###   ########.fr        #
+#    Updated: 2023/10/27 17:28:10 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ FILES_PT2 = ft_itoa.c \
 			ft_strmapi.c \
 			ft_strtrim.c \
 			ft_split.c \
-			ft_substr.c \
+			ft_substr.c
 
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra

@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:07 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/20 15:36:54 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/27 17:26:20 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ size_t strlcat(char *dest, const char *src, size_t size)
     return (dest_len + src_len);
 }
 
-int main() {
+/* int main() {
     char destination[20] = "Hello, ";
     const char* source = "World!";
     size_t buffer_size = sizeof(destination);
@@ -95,4 +95,4 @@ int main() {
     printf("Resulting string length: %zu\n", result);
 
     return 0;
-}
+} */
