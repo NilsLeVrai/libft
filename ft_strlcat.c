@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 10:34:07 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 18:32:04 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:09:13 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t n)
 		dst[len_dest] = '\0';
 	return (len_src);
 }
-
-/*
-int main ()
-{
-	char *len_dest = "zz,";
-	char *len_src = "zlzecdfvgbhnj";
-	size_t n = 3;
-	printf("%ld", strlcat(len_dest, len_src, n));
-}
-*/

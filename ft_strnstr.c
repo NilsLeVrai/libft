@@ -6,11 +6,11 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 16:39:23 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 18:37:24 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:09:24 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
@@ -24,19 +24,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 	while (i < n)
 	{
 		if (ft_strncmp(&big[i], &little[i], len) == 0 && little [i] != '\0')
-			return ((char *)big);
+			return ((char *)little);
 		i++;
 	}
 	return (NULL);
 }
-/* int main()
-{
-	const char *largestring = "FBar Baz";
-	const char *smallstring = "Bar";
-	char *ptr;
-	
-	//ptr = strnstr(largestring, smallstring, 6);
-	//printf("Pas moi :(\n%s", ptr);
-	ptr = ft_strnstr(largestring, smallstring, 8);
-	printf("Moi :(\n%s", ptr);
-} */
+ */

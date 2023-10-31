@@ -1,1 +1,4 @@
-strnstr, striteri, strncmp, substr, itoa, strjoin, split, strmapi, memmove, strlcat
+strnstr, striteri, substr, split, strmapi
+
+Mouais: itoa, strjoin, memmove
+Magie noire: strnstr, striteri, substr, split, strmapi
