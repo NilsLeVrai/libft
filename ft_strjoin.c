@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	size_s1;
 	size_t	size_s2;
-	char 	*p;
+	char	*p;
 
 	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
-	p = (char *) malloc (sizeof(char) * (size_s1 + size_s2 + 1 ));
+	p = (char *) malloc (sizeof(char) * (size_s1 + size_s2 + 1));
 	if (!p)
 		return (NULL);
 	while (*s1)
