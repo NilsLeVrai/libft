@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
@@ -19,14 +19,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 
 	i = 0;
 	len = ft_strlen(little);
-	if (*little == '\0' || !little)
+	if (len == 0 || !little)
 		return ((char *)big);
-	while (i < n)
+	while (i < n && big[i] != '\0')
 	{
-		if (ft_strncmp(&big[i], &little[i], len) == 0 && little [i] != '\0')
-			return ((char *)little);
+		if (ft_strncmp(&big[i], little, len) == 0 && little [0] == big[i])
+		{
+			if (i + len > n)
+				return (NULL);
+			return ((char *)&big[i]);
+		}
 		i++;
 	}
 	return (NULL);
 }
- */
