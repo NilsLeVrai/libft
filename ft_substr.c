@@ -37,7 +37,7 @@ src = Salut cest ninho; 16
 start = 7;
 len ;9
 res: cest ninho; 9
-*/
+
 int main()
 {
     char s[] = "Salut c'est Ninho";
@@ -49,4 +49,4 @@ int main()
     printf("%s\n", dest);
  
     return 0;
-}
+}*/
