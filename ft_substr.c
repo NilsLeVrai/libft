@@ -15,22 +15,28 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	malloc_len;
+	size_t	len_s;
 	size_t	i;
+	size_t	malloc_len;
 	char	*p;
 
-	malloc_len = len - start;
-	i = start;
-	printf("%ld", i);
+	len_s = ft_strlen(s);
+	if (start >= len_s || *s == '\0')
+		return (NULL);
+	if (len_s - start > len)
+		malloc_len = len;
+	else if (len_s - start < len)
+		malloc_len = len_s - start;
 	p = (char *) malloc(sizeof(char) * (malloc_len + 1));
-	while (len > start && *(s + i) != '\0')
+	if (!p)
+		return (NULL);
+	while (malloc_len > i)
 	{
-		*p = *(s + i);
+		p[i] = s[start + i];
 		i++;
-		p++;
 	}
-	*p = '\0';
-	return (p - malloc_len);
+	p[malloc_len] = '\0';
+	return (p);
 }
 /*
 src = Salut cest ninho; 16

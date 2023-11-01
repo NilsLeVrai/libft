@@ -11,3 +11,25 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char *ft_strmapi(char const *s, char (*f) (unsigned int, char))
+{
+	size_t	len_s;
+	size_t	i;
+	char	*p;
+
+	len_s = ft_strlen(s);
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	p = (char *) malloc(sizeof(char) * len_s + 1);
+	if (!p)
+		return (NULL);
+	while (s[i])
+	{
+		p[i] = (*f) (i, s[i]);
+		i++;
+	}
+	p[i] = '\0';
+	return (p);
+}
