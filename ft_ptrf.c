@@ -11,7 +11,7 @@ void iterer(char* s, int (*ptr)(int))
 	}
 	printf("\n");
 }
-int main(int argc, char** argv)
+int main()
 {
 	iterer("abcDEF'134 xyzWVU",&ft_tolower);
 	iterer("abcDEF'134 xyzWVU",&ft_toupper);

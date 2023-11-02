@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 18:18:41 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/02 11:47:57 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,32 +46,44 @@ int	power(int power)
 	return (nb);
 }
 
+char *itoa_neg(long nb)
+{
+	char	*p;
+	int		buffer_size;
+	int		i;
+
+	buffer_size = malloc_size(nb) + 1;
+	p = (char *) malloc (sizeof(char) * buffer_size + 1);
+	i = 1;
+	if (!p)
+		return (NULL);
+	p[0] = '-';
+	while (i <= buffer_size)
+	{
+		p[i++] = nb / 10 + '0';
+		nb %= 10;
+	}
+	p[i] = '\0';
+	return (p);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*tab;
-	int		i;
-	int		len;
-	int		base;
-	long	nb;
+	long 	nb;
+	char *p;
 
-	i = 0;
 	nb = n;
-	len = malloc_size(n);
-	base = power(len - 1);
-	tab = (char *) malloc(sizeof(char) * (len + 1));
-	if (!tab)
-		return (NULL);
 	if (nb < 0)
 	{
-		tab[0] = '-';
-		nb *= -1;
-	}
-	while (i < len)
-	{
-		tab[i++] = ((nb / base) + '0');
-		nb %= base;
-		base /= 10;
-	}
-	tab[i] = '\0';
-	return (tab);
+		p = (itoa_neg(nb));
+	}	
+	return (p);
+}
+#include <stdio.h>
+// taille buffer
+//nb / 10 + '0'
+int main ()
+{
+	int	nb = -645;
+	printf("%s", ft_itoa(nb));
 }
