@@ -11,57 +11,36 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-#include <string.h>
-#include <stdlib.h>
 
 char *ft_substr(const char *s, unsigned int start, size_t len)
 {
-    size_t len_s = strlen(s);
+	size_t	i;
+	size_t	len_s;
+	char	*p;
 
-    // Vérifier les cas spéciaux
-    if (start >= len_s || len == 0) {
-        return NULL;
-    }
-
-    // Ajuster la longueur si elle dépasse la fin de la chaîne
-    if (len > len_s - start) {
-        len = len_s - start;
-    }
-
-    // Allouer de la mémoire pour la nouvelle sous-chaîne
-    char *p = (char *)malloc(sizeof(char) * (len + 1));
-    if (!p) {
-        return NULL; // Gestion de l'échec de l'allocation mémoire
-    }
-
-    // Copier les caractères de la chaîne d'entrée dans la nouvelle sous-chaîne
-    size_t i = 0;
-    while (len > 0 && s[start + i] != '\0') {
-        p[i] = s[start + i];
-        i++;
-        len--;
-    }
-
-    // Terminer la nouvelle sous-chaîne
-    p[i] = '\0';
-
-    // Renvoyer la sous-chaîne résultante
-    return p;
+	i = 0;
+	if (!s)
+		return (NULL);
+	len_s = ft_strlen(s);
+	if (start >= len_s)
+		return(ft_strdup(""));
+	if (len > len_s - start)
+		len = len_s - start;
+    	p = (char *)malloc(sizeof(char) * (len + 1));
+	if (!p)
+		return NULL;
+	while (s[start] && i < len) 
+		p[i++] = s[start++];
+	p[i] = '\0';
+	return (p);
 }
-
 /*
-src = Salut cest ninho; 16
-start = 7;
-len ;9
-res: cest ninho; 9
-
+#include <stdio.h>
 int main()
 {
     char s[] = "Salut c'est Ninho";
- 	int start = 3;
-    int len = 10;
+ 	int start = 123;
+    int len = 15;
  
     char* dest = ft_substr(s, start, len);
  

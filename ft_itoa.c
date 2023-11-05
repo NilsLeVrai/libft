@@ -11,19 +11,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	malloc_size(int n)
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+int malloc_size(int n)
 {
-	int		i;
+	int	i;
 	long	nb;
 
 	i = 0;
 	nb = n;
-	if (nb == 0)
-		return (1);
 	if (nb < 0)
+	{
 		nb *= -1;
-	while (nb > 0)
+		i++;
+	}
+	if (nb == 0)
+		i++;
+	while (nb)
 	{
 		nb /= 10;
 		i++;
@@ -31,64 +36,41 @@ int	malloc_size(int n)
 	return (i);
 }
 
-int	power(int power)
+char *ft_itoa(int n)
 {
-	int	i;
-	int	nb;
+	char	*p;
+	int	len;
+	size_t	nb;
 
-	i = 0;
-	nb = 1;
-	while (i < power)
-	{
-		nb *= 10;
-		i++;
-	}
-	return (nb);
-}
-
-
-char	*ft_itoa_neg(int n)
-{
-	char	*tab;
-	int		i;
-	int		len;
-	int		base;
-	long	nb;
-
-	i = 0;
-	nb = n;
 	len = malloc_size(n);
-	base = power(len - 1);
-	tab = (char *) malloc(sizeof(char) * (len + 1));
-	if (!tab)
+	nb = n;
+	p = (char *)malloc(sizeof(char) * (len + 1));
+	if (!p)
 		return (NULL);
-	if (nb < 0)
+	p[len] = '\0';
+	if (n < 0)
 	{
-		tab[0] = '-';
+		*p = '-';
 		nb *= -1;
-		i++;
 	}
-	while (i <= len)
+	if (nb == 0)
+		*p = '0';
+	while (nb != 0)
 	{
-		tab[i++] = ((nb / base) + '0');
-		nb %= base;
-		base /= 10;
+		*(p + len - 1) = nb % 10 + '0';
+		nb /= 10;
+		len--;
 	}
-	tab[i] = '\0';
-	return (tab);
+	return (p);
 }
-
-char	*ft_itoa(int n)
-
-
-
-#include <stdio.h>
-// taille buffer
-//nb / 10 + '0'
-//-2147483648
-//2147483647  
+/*
 int main ()
 {
-	int	nb = 15;
-	printf("%s", ft_itoa(nb));
+	int i = INT_MAX;
+	for (i=0; i<= INT_MAX; i++)
+{
+
+	printf("%d: %s\n", malloc_size(i), ft_itoa(i));
+	//printf("%s\n", ft_itoa(i));
 }
+}*/
