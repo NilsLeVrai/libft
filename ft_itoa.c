@@ -11,10 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
-int malloc_size(int n)
+
+static int malloc_size(int n)
 {
 	int	i;
 	long	nb;

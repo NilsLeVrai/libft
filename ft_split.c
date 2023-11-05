@@ -1,18 +1,6 @@
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
-/*
-int	next_del(char const *s, char c)
-{
-	int	len;
-
-	len = 0;
-	while (*s != '\0' && s* != c)
-		len++;
-	return (len);
-}
-*/
-int	count_words(char const *s, char c)
+#include "libft.h"
+	
+static int	count_words(char const *s, char c)
 {
 	size_t	words;
 	int	is_del;
@@ -32,24 +20,55 @@ int	count_words(char const *s, char c)
 	}
 	return (words);
 }
-/*
-char	**ft_split(char const *s, char c)
+
+static char	*ft_allouer(char const *s, size_t head, size_t tail)
 {
+	char	*p;
 	int	i;
-	char	*head;
 
 	i = 0;
-	head = *s;
-	i = next_del(char const *s, char c);
-	while (i != 0)
-	{
-		
-	}
+	p = (char *)malloc(sizeof(char) * (tail - head) + 1);
+	if (!p)
+		return (NULL);
+	while (head < tail)
+		p[i++] = s[head++];
+	p[i] = '\0';
+	return (p);
 }
-*/
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	size_t	j;
+	int	nb_words;
+	size_t	head;
+	size_t	tail;
+	char	**p;
+
+	nb_words = count_words(s, c);
+	head = 0;
+	tail = 0;
+	j = 0;
+	p = (char **) malloc((sizeof(char *) * nb_words + 1));
+	if (!p || !s)
+		return (NULL);
+	while (--nb_words >= -1)
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		head = i;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+		tail = i;
+		p[j] = ft_allouer(s, head, tail);
+	}
+	p[j] = '\0';
+	return (p);
+}
+/*
 int main()
 {
 	char *tab = ",u,,uiiiiu,,o";
 	char del = ',';
 	printf("%d\n", count_words(tab, del));
 }
+*/
