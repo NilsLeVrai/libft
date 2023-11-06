@@ -20,43 +20,51 @@ static int	count_words(char const *s, char c)
 	}
 	return (words);
 }
-
-/* static char	*ft_allouer(char const *s, size_t head, size_t tail)
-{
-	char	*p;
-	int	i;
-
-	i = 0;
-	p = (char *)malloc(sizeof(char) * (tail - head) + 1);
-	if (!p)
-		return (NULL);
-	while (head < tail)
-		p[i++] = s[head++];
-	p[i] = '\0';
-	return (p);
-} */
 char	**ft_split(char const *s, char c)
 {
-	int		nb_words;
+	int	nb_words;
 	char	**p;
-
+	size_t	head;
+	size_t	tail;
+	int	i;
 	nb_words = count_words(s, c);
 	p = (char **) malloc((sizeof(char *) * nb_words + 1));
 	if (!p || !s)
 		return (NULL);
-	while (nb_words > 0)
+	head = 0;
+	tail = 0;
+	i = 0;
+	while (nb_words > i)
 	{
-
-		nb_words--;	
+		while (*s == c && *s)
+		{
+			tail++;
+			head++;
+			s++;		
+		}
+		while (*s != c && *s)
+		{
+			head++;
+			s++;
+		}
+		p[i] = ft_substr(s, tail, head - tail);
+		tail = head;
+		i++;
 	}
-	*p = '\0';
+	p[i] = NULL;
 	return (p);
 }
-/*
+#include <stdio.h>
 int main()
 {
-	char *tab = ",u,,uiiiiu,,o";
+	char *tab = "merde,merde";
+	char **tabite;
 	char del = ',';
-	printf("%d\n", count_words(tab, del));
+	int	i = 0;
+	tabite = ft_split(tab, del);
+	while (tabite[i] != NULL)
+	{
+		printf("%s\n", tabite[i]); 
+		i++;
+	}
 }
-*/
