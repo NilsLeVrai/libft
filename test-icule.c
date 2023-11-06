@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 18:33:48 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 18:33:52 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:22:47 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,35 @@ int	main()
 		if (!s1 || !s2)
 		return NULL;
 	void:
-		return ; */
+		return ; 
+/* #include <stdio.h>
+#include <string.h>
+
+int main () 
+{
+   char dest[] = "ab";
+   //123456
+   //abcdfgh
+   // si dest <= src --> dest = dest jusqua n + src; 
+   const char src[]  = "123456789";
+
+   printf("Before memmove dest = %s, src = %s\n", dest, src);
+   memmove(dest, src, 10);
+   printf("After memmove dest = %s, src = %s\n", dest, src);
+
+   return(0);
+
+   /*
+#include <stdio.h>
+int main()
+{
+    char s[] = "Salut c'est Ninho";
+ 	int start = 123;
+    int len = 15;
+ 
+    char* dest = ft_substr(s, start, len);
+ 
+    printf("%s\n", dest);
+ 
+    return 0;
+}*/

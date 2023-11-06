@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:54:21 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/03 11:26:47 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:20:01 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,3 @@ t_list	*ft_lstnew(void	*content)
 	p->next = NULL;
 	return (p);
 }
-

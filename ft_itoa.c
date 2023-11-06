@@ -6,15 +6,15 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/02 14:49:01 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:19:52 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int malloc_size(int n)
+static int	malloc_size(int n)
 {
-	int	i;
+	int		i;
 	long	nb;
 
 	i = 0;
@@ -34,10 +34,10 @@ static int malloc_size(int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*p;
-	int	len;
+	int		len;
 	size_t	nb;
 
 	len = malloc_size(n);
