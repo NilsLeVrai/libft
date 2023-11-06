@@ -57,14 +57,14 @@ char	**ft_split(char const *s, char c)
 #include <stdio.h>
 int main()
 {
-	char *tab = "merde,merde";
-	char **tabite;
+	char *tab = "oui,non,oui";
+	char **split;
 	char del = ',';
 	int	i = 0;
-	tabite = ft_split(tab, del);
-	while (tabite[i] != NULL)
+	split = ft_split(tab, del);
+	while (split[i] != NULL)
 	{
-		printf("%s\n", tabite[i]); 
+		printf("%s\n", split[i]); 
 		i++;
 	}
 }
