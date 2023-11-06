@@ -40,20 +40,20 @@ char	**ft_split(char const *s, char c)
 		{
 			tail++;
 			head++;
-			s++;		
+			s++;
 		}
 		while (*s != c && *s)
 		{
 			head++;
 			s++;
 		}
-		p[i] = ft_substr(s, tail, head - tail);
+		p[i++] = ft_substr(s - head, tail, head - tail);
 		tail = head;
-		i++;
 	}
 	p[i] = NULL;
 	return (p);
 }
+/*
 #include <stdio.h>
 int main()
 {
@@ -67,4 +67,4 @@ int main()
 		printf("%s\n", split[i]); 
 		i++;
 	}
-}
+}*/
