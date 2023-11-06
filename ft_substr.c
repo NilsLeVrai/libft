@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 16:19:29 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/06 13:26:11 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:05:42 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	if (start >= len_s)
 		return (ft_strdup(""));
 	if (len > len_s - start)
-	{
 		len = len_s - start;
-		p = (char *)malloc(sizeof(char) * (len + 1));
-	}
+	p = (char *)malloc(sizeof(char) * (len + 1));
 	if (!p)
 		return (NULL);
 	while (s[start] && i < len)
