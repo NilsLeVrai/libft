@@ -6,7 +6,7 @@
 #    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/11/02 14:14:37 by niabraha         ###   ########.fr        #
+#    Updated: 2023/11/06 13:44:43 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,8 @@ FILES_PT2 = ft_itoa.c \
 			ft_split.c \
 			ft_substr.c
 
+FILES_BONUS = 
+
 NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
@@ -67,3 +69,8 @@ fclean: clean
 	rm -f $(NAME)
 	
 re: fclean all
+
+bonus: $(FILES_BONUS)
+	$(AR) $(ARFLAGS) $^
+
+.PHONY: all clean fclean re bonus
