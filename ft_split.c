@@ -21,7 +21,7 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-static char	*ft_allouer(char const *s, size_t head, size_t tail)
+/* static char	*ft_allouer(char const *s, size_t head, size_t tail)
 {
 	char	*p;
 	int	i;
@@ -34,34 +34,22 @@ static char	*ft_allouer(char const *s, size_t head, size_t tail)
 		p[i++] = s[head++];
 	p[i] = '\0';
 	return (p);
-}
+} */
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	int	nb_words;
-	size_t	head;
-	size_t	tail;
+	int		nb_words;
 	char	**p;
 
 	nb_words = count_words(s, c);
-	head = 0;
-	tail = 0;
-	j = 0;
 	p = (char **) malloc((sizeof(char *) * nb_words + 1));
 	if (!p || !s)
 		return (NULL);
-	while (--nb_words >= -1)
+	while (nb_words > 0)
 	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		head = i;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		tail = i;
-		p[j] = ft_allouer(s, head, tail);
+
+		nb_words--;	
 	}
-	p[j] = '\0';
+	*p = '\0';
 	return (p);
 }
 /*

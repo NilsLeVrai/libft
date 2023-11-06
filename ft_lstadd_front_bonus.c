@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:27:06 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/03 11:52:55 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:13:54 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
-/* typedef struct s_list
-{
-	void			*content; // La donnée contenue dans le maillon
-	struct s_list	*next; // L’adresse du maillon suivant de la liste
-}	t_list; */ //NULL si le maillon suivant est le
