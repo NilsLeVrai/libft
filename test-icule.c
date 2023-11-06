@@ -1,27 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test-icule.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/27 18:33:48 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/06 13:22:47 by niabraha         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/*
 
-/* 
+#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+#include <bsd/string.h>
 
-
-
-
-//merci alexis t es le meilleur
-// strchr
 strcmp(strchr("", '\0'), ft_strchr("", '\0')) == 0 ? printf("🍾") : printf("🤡");
-
-
-
-
 
 //memcpy
 #include <stdio.h>
@@ -108,4 +94,10 @@ int main()
     printf("%s\n", dest);
  
     return 0;
-}*/
+
+int main()
+{
+	const char *s1 = "abcdefgh";
+	const char *set = (void*)NULL;
+	printf("%s", ft_strtrim(s1, set));
+} */
