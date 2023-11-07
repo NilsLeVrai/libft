@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:44:29 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 15:16:53 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:27:57 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	if (!lst || !del)
+		return ;
 	(*del)(lst->content);
-	free(lst);
+	free();
 }
