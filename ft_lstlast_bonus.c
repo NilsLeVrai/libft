@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:28:16 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 14:14:02 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:03:13 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*var;
-	
+
 	var = lst;
 	while (var != NULL && var->next != NULL)
 		var = var->next;

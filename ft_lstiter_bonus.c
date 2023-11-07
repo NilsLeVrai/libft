@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:14:13 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 16:42:07 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:43:05 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!f || !lst)
 		return ;

@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
+/*   Updated: 2023/11/07 16:05:59 by niabraha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-	
+
 static int	count_words(char const *s, char c)
 {
 	size_t	words;
@@ -48,18 +60,18 @@ char	**ft_split(char const *s, char c)
 			s++;
 		}
 		p[i++] = ft_substr(s - head, tail, head - tail);
+
 		tail = head;
 	}
 	p[i] = NULL;
 	return (p);
 }
-/*
-#include <stdio.h>
-int main()
+
+/* int main()
 {
-	char *tab = "oui,non,oui";
+	char *tab = "";
 	char **split;
-	char del = ',';
+	char del = 'z';
 	int	i = 0;
 	split = ft_split(tab, del);
 	while (split[i] != NULL)
@@ -67,4 +79,4 @@ int main()
 		printf("%s\n", split[i]); 
 		i++;
 	}
-}*/
+} */

@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 11:53:20 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 13:46:53 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:04:18 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_lstsize(t_list *lst)
 	{
 		while (lst)
 		{
-		lst = lst->next;
-		i++;
+			lst = lst->next;
+			i++;
 		}	
 	}
 	return (i);

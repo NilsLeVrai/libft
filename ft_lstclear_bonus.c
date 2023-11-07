@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:25:28 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 16:34:56 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:43:25 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		var = *lst;
 		*lst = (*lst)->next;
-		ft_lstdelone(var, *del);	
+		ft_lstdelone(var, *del);
 	}
 	lst = NULL;
 }
