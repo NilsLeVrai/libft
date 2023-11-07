@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 16:05:59 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:52:24 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count_words(char const *s, char c)
 {
 	size_t	words;
-	int	is_del;
+	int		is_del;
 
 	words = 0;
 	is_del = 0;
@@ -32,15 +32,15 @@ static int	count_words(char const *s, char c)
 	}
 	return (words);
 }
+
 char	**ft_split(char const *s, char c)
 {
-	int	nb_words;
 	char	**p;
 	size_t	head;
 	size_t	tail;
-	int	i;
-	nb_words = count_words(s, c);
-	p = (char **) malloc((sizeof(char *) * nb_words + 1));
+	int		i;
+
+	p = (char **) malloc((sizeof(char *) * count_words(s, c) + 1));
 	if (!p || !s)
 		return (NULL);
 	head = 0;
@@ -60,7 +60,6 @@ char	**ft_split(char const *s, char c)
 			s++;
 		}
 		p[i++] = ft_substr(s - head, tail, head - tail);
-
 		tail = head;
 	}
 	p[i] = NULL;
