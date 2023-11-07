@@ -6,15 +6,19 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:54:21 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/06 14:14:07 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:40:52 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 t_list	*ft_lstnew(void	*content)
 {
 	t_list	*p;
 
-	p = malloc(sizeof (p));
+	p = malloc(sizeof (t_list));
+	if (!p)
+		return (NULL);
 	p->content = content;
 	p->next = NULL;
 	return (p);
