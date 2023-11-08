@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:32 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 16:05:35 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:27:21 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,10 +106,24 @@ int main()
     printf("%s\n", dest);
  
     return 0;
-
+}
 int main()
 {
 	const char *s1 = "abcdefgh";
 	const char *set = (void*)NULL;
 	printf("%s", ft_strtrim(s1, set));
-} */
+} 
+
+int main()
+{
+	char *tab = "xxxxxxxxhello!";
+	char **split;
+	char del = 120;
+	int	i = 0;
+	split = ft_split(tab, del);
+	while (split[i] != NULL)
+	{
+		printf("%s\n", split[i]); 
+		i++;
+	}
+}*/

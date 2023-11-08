@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:29:32 by niabraha          #+#    #+#             */
-/*   Updated: 2023/10/27 19:05:09 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 12:36:52 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 
 	i = 0;
+	if (!s1 || !set)
+		return (NULL);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	j = ft_strlen(s1) - 1;

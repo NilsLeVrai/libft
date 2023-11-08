@@ -6,12 +6,12 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/07 16:52:24 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:45:19 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 static int	count_words(char const *s, char c)
 {
 	size_t	words;
@@ -35,12 +35,14 @@ static int	count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
+	int		nb_words;
 	char	**p;
 	size_t	head;
 	size_t	tail;
 	int		i;
 
-	p = (char **) malloc((sizeof(char *) * count_words(s, c) + 1));
+	nb_words = count_words(s, c);
+	p = (char **) malloc((sizeof(char *) * (nb_words + 1)));
 	if (!p || !s)
 		return (NULL);
 	head = 0;
@@ -59,6 +61,7 @@ char	**ft_split(char const *s, char c)
 			head++;
 			s++;
 		}
+
 		p[i++] = ft_substr(s - head, tail, head - tail);
 		tail = head;
 	}
@@ -68,9 +71,9 @@ char	**ft_split(char const *s, char c)
 
 /* int main()
 {
-	char *tab = "";
+	char *tab = "salutzztoi";
 	char **split;
-	char del = 'z';
+	char del = 'g';
 	int	i = 0;
 	split = ft_split(tab, del);
 	while (split[i] != NULL)
