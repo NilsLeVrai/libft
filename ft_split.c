@@ -12,6 +12,35 @@
 
 #include "libft.h"
 #include <stdio.h>
+
+static void	*free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
+
+/*static void	afficher_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		printf("free(tab[%d])= %s\n", i, tab[i]);
+		i++;
+	}
+	printf("i=%d\n", i);
+}
+*/
+
 static int	count_words(char const *s, char c)
 {
 	size_t	words;
@@ -37,39 +66,37 @@ char	**ft_split(char const *s, char c)
 {
 	int		nb_words;
 	char	**p;
-	size_t	head;
-	size_t	tail;
+	size_t	len_sub;
 	int		i;
+	char	*s2;
 
 	nb_words = count_words(s, c);
-	//printf("Words:");
-	p = (char **) malloc((sizeof(char *) * (nb_words + 1)));
+	p = (char **) ft_calloc((nb_words + 1), sizeof(char *));
 	if (!p || !s)
 		return (NULL);
-	head = 0;
-	tail = 0;
 	i = 0;
 	while (nb_words > i)
 	{
+		len_sub = 0;
 		while (*s == c && *s)
-		{
-			tail++;
-			head++;
 			s++;
-		}
 		while (*s != c && *s)
 		{
-			head++;
+			len_sub++;
 			s++;
 		}
-		p[i++] = ft_substr(s - head, tail, head - tail);
-		tail = head;
+		s2 = ft_substr(s - len_sub, 0, len_sub);
+//		printf("oui: %s\n",s2);
+		if (!s2)
+			free_tab(p);
+// afficher_tab(p);
+		p[i++] = s2;
 	}
 	p[i] = NULL;
 	return (p);
 }
-
-/* int main()
+/*
+int main()
 {
 	char *tab = "sal ,utzz,t,,,oi";
 	char **split;
