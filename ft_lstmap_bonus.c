@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:47:50 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/08 12:11:44 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:05:25 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*newvar;
+	void	*deleter;
 
 	newlst = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
-		newvar = ft_lstnew((*f)(lst->content));
+		deleter = (*f)(lst->content);
+		newvar = ft_lstnew(deleter);
 		if (!newvar)
 		{
+			del(deleter);
 			ft_lstclear(&newlst, (*del));
 			break ;
 		}
