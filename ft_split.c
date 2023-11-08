@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/08 16:45:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:47:26 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ char	**ft_split(char const *s, char c)
 			head++;
 			s++;
 		}
-
 		p[i++] = ft_substr(s - head, tail, head - tail);
 		tail = head;
 	}
