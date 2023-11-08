@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/08 16:47:26 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:30:53 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	nb_words = count_words(s, c);
+	//printf("Words:");
 	p = (char **) malloc((sizeof(char *) * (nb_words + 1)));
 	if (!p || !s)
 		return (NULL);
@@ -70,9 +71,9 @@ char	**ft_split(char const *s, char c)
 
 /* int main()
 {
-	char *tab = "salutzztoi";
+	char *tab = "sal ,utzz,t,,,oi";
 	char **split;
-	char del = 'g';
+	char del = ',';
 	int	i = 0;
 	split = ft_split(tab, del);
 	while (split[i] != NULL)
@@ -80,4 +81,4 @@ char	**ft_split(char const *s, char c)
 		printf("%s\n", split[i]); 
 		i++;
 	}
-} */
+}*/
