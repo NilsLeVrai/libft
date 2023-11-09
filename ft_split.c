@@ -5,32 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/09 12:54:42 by niabraha         ###   ########.fr       */
+/*   Created: 2023/11/09 14:29:36 by niabraha          #+#    #+#             */
+/*   Updated: 2023/11/09 17:28:15 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	*free_tab(char **tab)
 {
 	int	i;
 
-	i = 0;
-	while (tab[i])
-	{
+	i = -1;
+	while (tab[++i])
 		free(tab[i]);
-		i++;
-	}
 	free(tab);
 	return (NULL);
 }
 
-static char	*fill_tab(char const *tab, char c)
+static char	*fill_tab(const char *tab, char c)
 {
-	size_t	len;
 	char	*word;
+	size_t	len;
 
 	len = 0;
 	while (tab[len] && tab[len] != c)
@@ -38,13 +34,9 @@ static char	*fill_tab(char const *tab, char c)
 	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
-	len = 0;
-	while (tab[len] && tab[len] != c)
-	{
-		word[len] = tab[len];
-		len++;
-	}
 	word[len] = '\0';
+	while (len--)
+		word[len] = tab[len];
 	return (word);
 }
 
@@ -69,48 +61,30 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
-	int		nb_words;
 	char	**p;
-	size_t	len_sub;
 	int		i;
-	char	*s2;
+	int		nb_words;
+	size_t	len_sub;
 
 	nb_words = count_words(s, c);
-	p = (char **) ft_calloc((nb_words + 1), sizeof(char *));
+	p = (char **)ft_calloc((nb_words + 1), sizeof(char *));
 	if (!p || !s)
 		return (NULL);
-	i = 0;
-	while (nb_words > i)
+	i = -1;
+	while (nb_words > ++i)
 	{
 		len_sub = 0;
 		while (*s == c && *s)
 			s++;
-		while (*s != c && *s)
-		{
+		while (s[len_sub] != c && s[len_sub])
 			len_sub++;
-			s++;
-		}
-		s2 = fill_tab(s - len_sub, c);
-		if (!s2)
-			return(free_tab(p));
-		p[i++] = s2;
+		p[i] = fill_tab(s, c);
+		if (!p[i])
+			return (free_tab(p));
+		s += len_sub;
 	}
 	p[i] = NULL;
 	return (p);
 }
-
-/*int main()
-{
-	char *tab = "a,a,a,a";
-	char **split;
-	char del = ',';
-	int	i = 0;
-	split = ft_split(tab, del);
-	while (split[i] != NULL)
-	{
-		printf("%s\n", split[i]); 
-		i++;
-	}
-} */

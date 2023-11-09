@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:44:48 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/08 17:33:52 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:27:26 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dest_ptr = dest;
 	src_ptr = src;
 	if (!dest && !src)
-		return (0);
+		return (NULL);
 	while (n--)
 	{
 		*dest_ptr = *src_ptr;

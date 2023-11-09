@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 11:23:33 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/08 17:33:38 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/09 17:25:46 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,3 @@ char	*ft_itoa(int n)
 	}
 	return (p);
 }
-/*
-int main ()
-{
-	int i = INT_MAX;
-	for (i=0; i<= INT_MAX; i++)
-{
-
-	printf("%d: %s\n", malloc_size(i), ft_itoa(i));
-	//printf("%s\n", ft_itoa(i));
-}
-}*/
