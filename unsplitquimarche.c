@@ -1,17 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   unsplitquimarche.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:56 by niabraha          #+#    #+#             */
-/*   Updated: 2023/11/09 12:54:42 by niabraha         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:57:05 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+
+	str = (char *) s;
+	while (n--)
+	{
+		*str = '\0';
+		str++;
+	}
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*memory;
+
+	memory = malloc(nmemb * size);
+	if (!memory)
+		return (NULL);
+	ft_bzero(memory, (nmemb * size));
+	return (memory);
+}
 
 static void	*free_tab(char **tab)
 {
@@ -71,18 +104,15 @@ static int	count_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int		nb_words;
 	char	**p;
 	size_t	len_sub;
 	int		i;
-	char	*s2;
 
-	nb_words = count_words(s, c);
-	p = (char **) ft_calloc((nb_words + 1), sizeof(char *));
+	p = (char **) ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!p || !s)
 		return (NULL);
 	i = 0;
-	while (nb_words > i)
+	while (count_words(s, c) > i)
 	{
 		len_sub = 0;
 		while (*s == c && *s)
@@ -92,16 +122,15 @@ char	**ft_split(char const *s, char c)
 			len_sub++;
 			s++;
 		}
-		s2 = fill_tab(s - len_sub, c);
-		if (!s2)
+		p[i++] = fill_tab(s - len_sub, c);
+		if (!p)
 			return(free_tab(p));
-		p[i++] = s2;
 	}
 	p[i] = NULL;
 	return (p);
 }
 
-/*int main()
+int main()
 {
 	char *tab = "a,a,a,a";
 	char **split;
@@ -113,4 +142,4 @@ char	**ft_split(char const *s, char c)
 		printf("%s\n", split[i]); 
 		i++;
 	}
-} */
+}
