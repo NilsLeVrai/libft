@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:36:11 by niabraha          #+#    #+#             */
-/*   Updated: 2024/01/12 16:50:32 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:10:48 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,11 +101,17 @@ int	atoi_tester()
         printf("✅\n");
     else
         printf("KO\n");
+    
+    printf("Test 15: i = 121221474836475 \n");
+    if (ft_atoi("121221474836475") == atoi("12122147436475"))
+        printf("✅\n");
+    else
+        printf("KO\n");
 }
 
 int main()
 {
-    if (atoi_tester() == 0)
+    if (atoi_tester())
         printf("All tests passed\n");
     else
         printf("KO\n");
