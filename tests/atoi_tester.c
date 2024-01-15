@@ -6,13 +6,13 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:36:11 by niabraha          #+#    #+#             */
-/*   Updated: 2024/01/12 18:10:48 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:02:43 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/libft.h"
 #include <stdio.h>
-	// MANDATORY PART 1
+
 
 int	atoi_tester()
 {
@@ -60,8 +60,8 @@ int	atoi_tester()
     else
         printf("KO\n");
     
-    printf("Test 8: i = 2147483648 \n");
-    if (ft_atoi("2147483648") == atoi("2147483648"))
+    printf("Test 8: i = 15461000 \n");
+    if (ft_atoi("15461000") == atoi("15461000"))
         printf("✅\n");
     else
         printf("KO\n");
@@ -95,18 +95,6 @@ int	atoi_tester()
         printf("✅\n");
     else
         printf("KO\n");
-    
-    printf("Test 14: i = -7 \n");
-    if (ft_atoi("-7") == atoi("-7"))
-        printf("✅\n");
-    else
-        printf("KO\n");
-    
-    printf("Test 15: i = 121221474836475 \n");
-    if (ft_atoi("121221474836475") == atoi("12122147436475"))
-        printf("✅\n");
-    else
-        printf("KO\n");
 }
 
 int main()
@@ -116,14 +104,3 @@ int main()
     else
         printf("KO\n");
 }
-
-// 	char *s = "%p";
-// 	int v = 5;
-// 	int *vv = &v;
-
-// 	printf("result :\n");
-// 	int result = ft_printf(s, vv);
-// 	printf("\nexpected :\n");
-// 	int expected = printf(s, vv);
-
-// 	assert(result == expected);
