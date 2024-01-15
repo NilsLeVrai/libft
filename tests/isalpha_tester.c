@@ -6,33 +6,34 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:01:56 by niabraha          #+#    #+#             */
-/*   Updated: 2024/01/15 15:33:19 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/01/15 17:09:06 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tester.h"
 #include <stdio.h>
 
-int	isalpha_tester(char c)
+int	isalpha_tester()
 {
-    int     i = 0;
-    char   *string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-    while (i < 128)
+    char c = 0;
+    int i = 0;
+    while (i <= 127)
     {
-        if (ft_isalpha(c) == isalpha(c))
-            printf("good %c\n", c);
+        i = ft_isalpha(c) - isalpha(c);
+        printf("%d\n", i);
+        c++;
         i++;
     }
-    return(0);
 }
 
 int main()
 {
     if (isalpha_tester())
+    {
         printf("All tests passed\n");
-    else
-        printf("KO\n");
+        break;
+    }
+    printf("KO\n");
 }
 
 /*
