@@ -6,7 +6,7 @@
 /*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:01:56 by niabraha          #+#    #+#             */
-/*   Updated: 2024/01/15 17:09:06 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/01/15 17:10:48 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 int	isalpha_tester()
 {
-    char c = 0;
+    char str[128];
     int i = 0;
     while (i <= 127)
     {
-        i = ft_isalpha(c) - isalpha(c);
+        i = ft_isalpha(i) - isalpha(i);
         printf("%d\n", i);
-        c++;
         i++;
     }
 }
@@ -31,7 +30,6 @@ int main()
     if (isalpha_tester())
     {
         printf("All tests passed\n");
-        break;
     }
     printf("KO\n");
 }
