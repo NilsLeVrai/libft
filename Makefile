@@ -3,13 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: niabraha <niabraha@42.fr>                  +#+  +:+       +#+         #
+#    By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 10:47:50 by niabraha          #+#    #+#              #
-#    Updated: 2023/11/09 17:28:28 by niabraha         ###   ########.fr        #
+#    Updated: 2024/06/04 21:35:25 by niabraha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+FILES_PRINTF = args_char.c \
+				args_digit.c \
+				args_lowerhexa.c \
+				args_percent.c \
+				args_pointer.c \
+				args_string.c \
+				args_unsigned.c \
+				args_upperhexa.c \
+				ft_printf.c \
+				ft_printf_utils.c
+				
 FILES_PT1 = ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -56,13 +67,16 @@ FILES_PT3 = ft_lstadd_back_bonus.c \
 			ft_lstsize_bonus.c \
 			ft_lstiter_bonus.c
 
+
+FILES_GNL = get_next_line.c \
+			get_next_line_utils.c
+
 NAME = libft.a
-CFLAGS = -Wall -Werror -Wextra
-CC = gcc
+CFLAGS = -Wall -Werror -Wextra -fsanitize=address
+CC = cc
 ARFLAGS = rcs
 
-OBJ = $(FILES_PT1:.c=.o) $(FILES_PT2:.c=.o) 
-OBJ_BONUS = $(FILES_PT3:.c=.o)
+OBJ = $(FILES_PT1:.c=.o) $(FILES_PT2:.c=.o) $(FILES_PT3:.c=.o) $(FILES_PRINTF:.c=.o) $(FILES_GNL:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -78,8 +92,5 @@ fclean: clean
 	rm -f $(NAME)
 	
 re: fclean all
-
-bonus: $(OBJ_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $^
 
 .PHONY: all clean fclean re bonus
