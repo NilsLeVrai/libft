@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 15:42:22 by niabraha          #+#    #+#             */
-/*   Updated: 2024/06/04 21:36:31 by niabraha         ###   ########.fr       */
+/*   Updated: 2024/06/12 15:58:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

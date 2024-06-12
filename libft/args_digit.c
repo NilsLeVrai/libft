@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   args_percent.c                                     :+:      :+:    :+:   */
+/*   args_digit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 23:21:28 by niabraha          #+#    #+#             */
-/*   Updated: 2024/06/04 21:36:31 by niabraha         ###   ########.fr       */
+/*   Created: 2023/12/06 00:21:55 by niabraha          #+#    #+#             */
+/*   Updated: 2024/06/12 15:58:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	args_percent(void)
+int	args_digit(va_list args)
 {
-	char	c;
+	long	nbr;
+	int		is_neg;
 
-	c = '%';
-	return (ft_putchar_fd_safe(c, 1));
+	nbr = va_arg(args, int);
+	is_neg = 0;
+	if (nbr < 0)
+	{
+		nbr *= -1;
+		is_neg++;
+		if (ft_putchar_fd_safe('-', 1) == -1)
+			return (-1);
+	}
+	return (ft_putnbr_base(nbr, "0123456789") + is_neg);
 }

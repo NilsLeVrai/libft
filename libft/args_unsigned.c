@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   args_char.c                                        :+:      :+:    :+:   */
+/*   args_unsigned.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 17:12:56 by niabraha          #+#    #+#             */
-/*   Updated: 2024/06/04 21:36:31 by niabraha         ###   ########.fr       */
+/*   Created: 2023/12/06 00:15:59 by niabraha          #+#    #+#             */
+/*   Updated: 2024/06/12 15:58:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	args_char(va_list args)
+int	args_unsigned(va_list args)
 {
-	char	c;
+	unsigned int	nbr;
 
-	c = va_arg(args, int);
-	return (ft_putchar_fd_safe(c, 1));
+	nbr = va_arg(args, unsigned int);
+	return (ft_putnbr_base(nbr, "0123456789"));
 }

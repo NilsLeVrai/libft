@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   args_lowerhexa.c                                   :+:      :+:    :+:   */
+/*   args_percent.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: niabraha <niabraha@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: niabraha <niabraha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 11:52:51 by niabraha          #+#    #+#             */
-/*   Updated: 2024/06/04 21:36:31 by niabraha         ###   ########.fr       */
+/*   Created: 2023/12/05 23:21:28 by niabraha          #+#    #+#             */
+/*   Updated: 2024/06/12 15:58:36 by niabraha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	args_lowerhexa(va_list args)
+int	args_percent(void)
 {
-	unsigned int	nbr;
+	char	c;
 
-	nbr = va_arg(args, unsigned int);
-	return (ft_putnbr_base(nbr, "0123456789abcdef"));
+	c = '%';
+	return (ft_putchar_fd_safe(c, 1));
 }
