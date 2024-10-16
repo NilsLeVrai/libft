@@ -781,7 +781,7 @@ void test_strlen()
 	str = "\0\0";
 	ft_strlen(str) == strlen(str) ? printf("✅ ") : printf("❌ ");
 
-	str = "\x2A";
+	str = "\xA5";
 	ft_strlen(str) == strlen(str) ? printf("✅ ") : printf("❌ ");
 
 	str = "\x2A\x2A";
@@ -806,7 +806,7 @@ void test_is_blabla()
 /* 
 verifier si le makefile relink pas
 nm -u libft.a
-make && cc -Wall -Werror -Wextra test.c -lbsd c libft.a  && ./a.out
+make && cc -Wall -Werror -Wextra test_libft.c -lbsd c libft.a  && ./a.out
  */
 
 int main ()
